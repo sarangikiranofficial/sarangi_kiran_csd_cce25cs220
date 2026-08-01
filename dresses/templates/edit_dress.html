@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Edit Dress Record</h2>
+
+<form method="POST" action="{% url 'edit_dress' dress.id %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="id_dress_name">Dress Name:</label>
+        {{ form.dress_name }}
+    </div>
+    <div class="form-group">
+        <label for="id_size">Size:</label>
+        {{ form.size }}
+    </div>
+    <div class="form-group">
+        <label for="id_colour">Colour:</label>
+        {{ form.colour }}
+    </div>
+    <div class="form-group">
+        <label for="id_price">Price:</label>
+        {{ form.price }}
+    </div>
+
+    <button type="submit" class="btn btn-edit">Update Dress</button>
+    <a href="{% url 'dress_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

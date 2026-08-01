@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Add New Dress</h2>
+
+<form id="addDressForm" method="POST" action="{% url 'add_dress' %}" onsubmit="return validateDressForm()">
+    {% csrf_token %}
+    
+    <div class="form-group">
+        <label for="id_dress_name">Dress Name:</label>
+        {{ form.dress_name }}
+    </div>
+
+    <div class="form-group">
+        <label for="id_size">Size:</label>
+        {{ form.size }}
+    </div>
+
+    <div class="form-group">
+        <label for="id_colour">Colour:</label>
+        {{ form.colour }}
+    </div>
+
+    <div class="form-group">
+        <label for="id_price">Price:</label>
+        {{ form.price }}
+    </div>
+
+    <p id="jsError" class="alert" style="display:none; margin-top:10px;"></p>
+
+    <button type="submit" class="btn">Save Dress</button>
+    <a href="{% url 'dress_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

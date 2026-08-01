@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="text-align: center; padding: 20px 0;">
+    <h1>Boutique Dress Inventory System</h1>
+    <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 15px auto;">
+        Welcome to the Boutique Dress Inventory System. Manage your dresses with simple record keeping and real-time updates.
+    </p>
+    <div class="btn-group" style="margin-top: 25px;">
+        <a href="{% url 'add_dress' %}" class="btn">Add Dress</a>
+        <a href="{% url 'dress_list' %}" class="btn btn-secondary">View Dresses</a>
+    </div>
+</div>
+{% endblock %}

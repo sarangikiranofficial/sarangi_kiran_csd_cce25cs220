@@ -1,0 +1,236 @@
+/* Import Google Fonts for Bridgerton / Vintage Aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg-cream: #FAF7F2;
+    --card-bg: #FFFFFF;
+    --text-main: #3C3633;
+    --text-muted: #7A726C;
+    --accent-sage: #8A9A86;
+    --accent-rose: #D8A7A0;
+    --accent-dusty-blue: #7B8FA1;
+    --accent-gold: #C5A880;
+    --border-light: #E8E2D9;
+    --danger-soft: #C97A7E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-main);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: 0.5px;
+}
+
+/* Header & Navigation */
+nav {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-light);
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+nav h2 a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+nav div span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-right: 15px;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent-rose);
+}
+
+/* Main Layout Container */
+.container {
+    max-width: 860px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 35px 40px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(60, 54, 51, 0.03);
+    flex: 1;
+}
+
+/* Custom Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    color: #FFFFFF;
+    background-color: var(--accent-rose);
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid var(--accent-rose);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    background-color: #cb968e;
+    border-color: #cb968e;
+    box-shadow: 0 2px 8px rgba(216, 167, 160, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--accent-gold);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-gold);
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(197, 168, 128, 0.3);
+}
+
+.btn-edit {
+    background-color: var(--accent-sage);
+    border-color: var(--accent-sage);
+}
+
+.btn-edit:hover {
+    background-color: #788874;
+    border-color: #788874;
+}
+
+.btn-danger {
+    background-color: var(--danger-soft);
+    border-color: var(--danger-soft);
+}
+
+.btn-danger:hover {
+    background-color: #b8696d;
+    border-color: #b8696d;
+}
+
+/* Vintage Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    background-color: var(--bg-cream);
+    border-bottom: 2px solid var(--border-light);
+    padding: 14px 12px;
+    text-align: left;
+}
+
+td {
+    border-bottom: 1px solid var(--border-light);
+    padding: 14px 12px;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+tr:hover td {
+    background-color: #FAF7F2;
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.form-control, input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-light);
+    border-radius: 2px;
+    background-color: var(--bg-cream);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus, input[type="text"]:focus, input[type="password"]:focus {
+    border-color: var(--accent-rose);
+    background-color: #FFFFFF;
+}
+
+/* Alert Boxes */
+.alert {
+    padding: 12px 16px;
+    background-color: #FDF0ED;
+    border: 1px solid var(--accent-rose);
+    color: #A34E46;
+    border-radius: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-light);
+    color: var(--text-muted);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
